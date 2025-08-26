@@ -1,5 +1,6 @@
 @php
     $appSetting = App\Models\AppSetting::first();
+    $importantLinks = App\Models\ImportantLink::where('is_shown', 1)->get();
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -62,11 +63,14 @@
                 <div class="brand-logo">
                     <a href="{{ route('home') }}">
                         @if (Route::is('home'))
-                            <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="main-logo" height="50">
+                            <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="main-logo"
+                                height="50">
                         @else
-                            <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="main-logo" height="50">
+                            <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="main-logo"
+                                height="50">
                         @endif
-                        <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="sticky-logo" height="50">
+                        <img src="{{ asset('images/logos/logo_polije.png') }}" alt="logo" class="sticky-logo"
+                            height="50">
                     </a>
                 </div>
             </div>
@@ -222,13 +226,11 @@
                             <div class="widget nav-widget">
                                 <h5 class="widget-title">Tautan Penting</h5>
                                 <ul>
-                                    <li><a href="https://polije.ac.id" target="_blank">Politeknik Negeri Jember</a>
-                                    </li>
-                                    <li><a href="https://kemdiktisaintek.go.id" target="_blank">Kemdiksaintek</a></li>
-                                    <li><a href="https://sinta.kemdikbud.go.id" target="_blank">SINTA</a></li>
-                                    <li><a href="http://arjuna.kemdikbud.go.id" target="_blank">ARJUNA</a></li>
-                                    {{-- <li><a href="about.html">Blogs &amp; Guides</a></li>
-                                    <li><a href="about.html">Premium Support</a></li> --}}
+                                    @foreach ($importantLinks as $importantLink)
+                                        <li><a href="{{ $importantLink->url }}"
+                                                @if ($importantLink->open_in_new_tab == 1) target="_blank" @endif>{{ $importantLink->name }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

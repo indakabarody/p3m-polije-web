@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\BrandController as AdminBrandController;
 use App\Http\Controllers\Admin\ClientController as AdminClientController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\ImportantLinkController as AdminImportantLinkController;
 use App\Http\Controllers\Admin\PasswordController as AdminPasswordController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
@@ -54,4 +55,6 @@ Route::middleware(['auth:admin', 'active'])->prefix('admin')->name('admin.')->gr
         Route::get('/', [AdminAppSettingController::class, 'index'])->name('index');
         Route::put('/', [AdminAppSettingController::class, 'update'])->name('update');
     });
+
+    Route::resource('/important-links', AdminImportantLinkController::class);
 });
