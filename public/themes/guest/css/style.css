@@ -249,8 +249,8 @@ h6 a {
 
 ul,
 ol {
-    margin: 0px;
-    padding: 0px;
+    margin: 15px;
+    padding: 15px;
     /* list-style-type: none; */
 }
 
