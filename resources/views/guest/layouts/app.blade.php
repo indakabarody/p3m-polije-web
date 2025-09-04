@@ -76,7 +76,7 @@
             </div>
             <div class="header-right">
                 <nav class="nav-menu d-none d-xl-block">
-                    <ul>
+                    <ul style="list-style-type: none;">
                         <li>
                             <a href="{{ route('home') }}">Beranda</a>
                         </li>
@@ -128,7 +128,7 @@
                 </a>
             </div>
             <nav class="mobile-menu">
-                <ul>
+                <ul style="list-style-type: none;">
                     <li>
                         <a href="{{ route('home') }}">Beranda</a>
                     </li>
