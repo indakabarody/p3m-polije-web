@@ -15,8 +15,20 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::where('is_shown', 1)->latest()->paginate(10);
+        $blogs = Blog::where('is_shown', 1);
+
+        if (request()->has('keyword')) {
+            $keyword = request()->input('keyword');
+            $blogs = $blogs->where(function ($query) use ($keyword) {
+                $query->where('title', 'LIKE', "%{$keyword}%")
+                    ->orWhere('slug', 'LIKE', "%{$keyword}%")
+                    ->orWhere('content', 'LIKE', "%{$keyword}%");
+            });
+        }
+
+        $blogs = $blogs->latest()->paginate(6);
         $blogCategories = BlogCategory::orderBy('name', 'ASC')->get();
+
         return view('guest.pages.blogs.index', compact('blogs', 'blogCategories'));
     }
 

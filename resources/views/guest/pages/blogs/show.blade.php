@@ -42,6 +42,13 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="blog-sidebar m-t-md-80">
+                        <div class="widget search-widget">
+                            <h4>Pencarian</h4>
+                            <form method="GET" action="{{ route('blogs.index') }}">
+                                <input type="search" placeholder="Masukkan kata kunci..." name="keyword">
+                                <button class="search-btn"><i class="far fa-search"></i></button>
+                            </form>
+                        </div>
                         <div class="widget latest-post-widget">
                             <h4 class="widget-title">Postingan Terbaru</h4>
                             <div class="popular-posts-wrapper">
@@ -57,7 +64,8 @@
                                         @endisset
                                         <div class="popular-posts-item-content">
                                             <h5 class="popular-posts-title"><a
-                                                    href="{{ route('blogs.show', $blog->slug) }}">{{ $blog->title }}</a></h5>
+                                                    href="{{ route('blogs.show', $blog->slug) }}">{{ $blog->title }}</a>
+                                            </h5>
                                             <a href="#" class="posts-date"><i class="far fa-calendar-alt"></i>
                                                 {{ $blog->created_at->format('d F Y') }}</a>
                                         </div>

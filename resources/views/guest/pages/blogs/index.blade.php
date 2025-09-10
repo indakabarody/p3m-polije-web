@@ -12,7 +12,7 @@
     {{-- ====== Page title area Start ====== --}}
     <section class="page-title-area">
         <div class="container">
-            <div class="page-title-content text-center">
+            <div class="text-center page-title-content">
                 <h1 class="page-title">@yield('title')</h1>
             </div>
         </div>
@@ -68,12 +68,29 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="blog-sidebar m-t-md-80">
+                        <div class="widget search-widget">
+                            <h4>Pencarian</h4>
+                            <form method="GET" action="{{ route('blogs.index') }}">
+                                <input type="search" placeholder="Masukkan kata kunci..." name="keyword">
+                                <button class="search-btn"><i class="far fa-search"></i></button>
+                            </form>
+                        </div>
                         <div class="widget category-widget">
                             <h4 class="widget-title">Kategori</h4>
 
                             <ul class="category-link">
                                 @foreach ($blogCategories as $blogCategory)
-                                    <li><a href="{{ route('blog-categories.show', $blogCategory->slug) }}">{{ $blogCategory->name }}</a></li>
+                                    @php
+                                        $blogCount = App\Models\Blog::where(
+                                            'blog_category_id',
+                                            $blogCategory->id,
+                                        )->count();
+                                        if ($blogCount < 1) {
+                                            continue;
+                                        }
+                                    @endphp
+                                    <li><a href="{{ route('blog-categories.show', $blogCategory->slug) }}">{{ $blogCategory->name }}
+                                            ({{ $blogCount }})</a></li>
                                 @endforeach
                             </ul>
                         </div>
