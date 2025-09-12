@@ -247,11 +247,16 @@ h6 a {
     color: var(--color-heading);
 }
 
-ul,
+/* ul,
 ol {
-    margin: 15px;
-    padding: 15px;
-    /* list-style-type: none; */
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; } */
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
 }
 
 p {
@@ -7459,14 +7464,6 @@ textarea {
     background-color: #e5eeff;
     color: #0057ff;
 }
-.team-members .member-box .member-info .social-links li.instagram a {
-    background-color: #e630f1;
-    color: #fff;
-}
-.team-members .member-box .member-info .social-links li.linkedin a {
-    background-color: #006394;
-    color: #fff;
-}
 .team-members .member-box:hover::before {
     opacity: 0.6;
     -webkit-transform: perspective(400px) rotateX(0deg);
@@ -7615,7 +7612,7 @@ textarea {
     font-size: 13px;
 }
 .trainer-item .social-links li.facebook a {
-    background-color: #09aee6;
+    background-color: #0040e5;
     color: #fff;
 }
 .trainer-item .social-links li.twitter a {
@@ -7629,14 +7626,6 @@ textarea {
 .trainer-item .social-links li.behance a {
     background-color: #e5eeff;
     color: #0057ff;
-}
-.trainer-item .social-links li.instagram a {
-    background-color: #e630f1;
-    color: #fff;
-}
-.trainer-item .social-links li.linkedin a {
-    background-color: #006394;
-    color: #fff;
 }
 .trainer-item:hover .content {
     bottom: -65px;
@@ -7656,17 +7645,17 @@ textarea {
     border-radius: 12px;
     background: -webkit-linear-gradient(
         340deg,
-        #09aee6 0%,
+        #0040e5 0%,
         #028ceb 59%,
         #04d7f1 100%
     );
     background: -o-linear-gradient(
         340deg,
-        #09aee6 0%,
+        #0040e5 0%,
         #028ceb 59%,
         #04d7f1 100%
     );
-    background: linear-gradient(110deg, #09aee6 0%, #028ceb 59%, #04d7f1 100%);
+    background: linear-gradient(110deg, #0040e5 0%, #028ceb 59%, #04d7f1 100%);
     padding: 80px 0;
     text-align: center;
 }
