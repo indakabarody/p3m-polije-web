@@ -180,6 +180,8 @@
                 "<'col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start'i>" +
                 "<'col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end'p>" +
                 ">"
+        }).on("draw", function() {
+            KTMenu.createInstances();
         });
     </script>
     <script>
