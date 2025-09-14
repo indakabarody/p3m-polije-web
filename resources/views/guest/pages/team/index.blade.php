@@ -58,7 +58,7 @@
                             <div class="content">
                                 <h5>{{ $team->name }}</h5>
                                 <span>{{ $team->level }}</span>
-                                <ul class="social-links">
+                                <ul class="social-links custom-ul">
                                     @isset($team->facebook_url)
                                         <li class="facebook"><a href="{{ $team->facebook_url }}" target="_blank"><i
                                                     class="fab fa-facebook-f"></i></a></li>

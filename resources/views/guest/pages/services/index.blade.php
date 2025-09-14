@@ -73,7 +73,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        {{-- <ul class="flex-wrap shop-pagination justify-content-center m-t-30 wow fadeInUp"
+                        {{-- <ul class="flex-wrap shop-pagination justify-content-center m-t-30 wow fadeInUp custom-ul"
                             data-wow-delay="0.2s">
                             <li class="page-item disabled">
                                 <span class="page-link"><i class="fas fa-angle-double-left"></i></span>

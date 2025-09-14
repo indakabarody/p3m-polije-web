@@ -46,7 +46,7 @@
                                     </div>
                                 @endisset
                                 <div class="post-content">
-                                    <ul class="post-meta">
+                                    <ul class="post-meta custom-ul">
                                         <li><a href="#" class="post-meta"><i
                                                     class="far fa-user"></i>{{ $blog->admin->name }}</a>
                                         </li>

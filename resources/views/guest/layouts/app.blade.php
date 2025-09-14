@@ -76,13 +76,13 @@
             </div>
             <div class="header-right">
                 <nav class="nav-menu d-none d-xl-block">
-                    <ul style="list-style-type: none;">
+                    <ul class="custom-ul">
                         <li>
                             <a href="{{ route('home') }}">Beranda</a>
                         </li>
                         <li>
                             <a href="#">Profil P3M</a>
-                            <ul class="sub-menu">
+                            <ul class="sub-menu custom-ul">
                                 <li>
                                     <a href="{{ route('about.index') }}">Tentang</a>
                                 </li>
@@ -105,7 +105,7 @@
                         </li>
                     </ul>
                 </nav>
-                <ul class="header-extra">
+                <ul class="header-extra custom-ul">
                     <li class="d-xl-none">
                         <a href="#" class="navbar-toggler">
                             <span></span>
@@ -128,13 +128,13 @@
                 </a>
             </div>
             <nav class="mobile-menu">
-                <ul style="list-style-type: none;">
+                <ul class="custom-ul">
                     <li>
                         <a href="{{ route('home') }}">Beranda</a>
                     </li>
                     <li>
                         <a href="#">Profil P3M</a>
-                        <ul class="sub-menu">
+                        <ul class="sub-menu custom-ul">
                             <li>
                                 <a href="{{ route('about.index') }}">Tentang</a>
                             </li>
@@ -183,7 +183,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="widget contact-widget">
                             <h5 class="widget-title">Kontak</h5>
-                            <ul>
+                            <ul class="custom-ul">
                                 @if ($appSetting != null && $appSetting->company_address != null)
                                     <li>
                                         <a href="#">
@@ -211,7 +211,7 @@
                             </ul>
                         </div>
                         {{-- <div class="widget text-block-widget">
-                            <ul class="social-links bordered-style">
+                            <ul class="social-links bordered-style custom-ul">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
@@ -225,7 +225,7 @@
                         <div class="d-lg-flex justify-content-center">
                             <div class="widget nav-widget">
                                 <h5 class="widget-title">Tautan Penting</h5>
-                                <ul>
+                                <ul class="custom-ul">
                                     @foreach ($importantLinks as $importantLink)
                                         <li><a href="{{ $importantLink->url }}"
                                                 @if ($importantLink->open_in_new_tab == 1) target="_blank" @endif>{{ $importantLink->name }}</a>

@@ -46,7 +46,7 @@
                                     </div>
                                 @endisset
                                 <div class="post-content">
-                                    <ul class="post-meta">
+                                    <ul class="post-meta custom-ul">
                                         <li><a href="#" class="post-meta"><i
                                                     class="far fa-user"></i>{{ $blog->admin->name }}</a>
                                         </li>
@@ -78,7 +78,7 @@
                         <div class="widget category-widget">
                             <h4 class="widget-title">Kategori</h4>
 
-                            <ul class="category-link">
+                            <ul class="category-link custom-ul">
                                 @foreach ($blogCategories as $blogCategory)
                                     @php
                                         $blogCount = App\Models\Blog::where(

@@ -253,7 +253,19 @@ ol {
   padding: 0px;
   list-style-type: none; } */
 
-ul {
+/* ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+} */
+
+.custom-ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; 
+}
+
+.custom-ul {
     margin: 0px;
     padding: 0px;
     list-style-type: none;
